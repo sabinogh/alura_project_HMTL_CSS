@@ -1,0 +1,305 @@
+body {
+	font-family: 'Montserrat', sans-serif; /*Alterar todas as fontes do site (https://fonts.google.com/)*/
+}
+
+header {
+	background: #BBBBBB; /*Cor cinza*/
+	padding: 20px 0; /*Tudo estará no limite deste cabeçalho*/
+}
+
+.caixa {
+	position: relative; /*Aqui ele será relativo a div (divisão) criada*/
+	width: 940px; /*Tamanho mais comum de pixel, mas existem maiores*/
+	margin: 0 auto; /*Margem da parte de cima sendo dimensionado automaticamente*/
+}
+
+nav {
+	position: absolute; /*Se move pelo posicionamento do navegador e não de onde foi criado*/
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline; /*Faz a lista ficar alinhado*/
+	margin: 0 0 0 15px; /*Movendo o texto para a esqueda*/
+}
+
+nav a {
+	text-transform: uppercase; /*Letras aparecem em maiúsculas*/
+	color: #000000; /*Cor preto*/
+	font-weight: bold; /*Letra em negrito*/
+	font-size: 22px; /*Tamanho da fonte*/
+	text-decoration: none; /*Remove o visual de link*/
+}
+
+nav a:hover { /*Muda a cor do texto quando se passa o mouse de link por cima*/
+	color: #C78C19;
+	text-decoration: underline; /*Fica sublinhado quando se passa o mouse*/
+}
+
+.produtos { /*Deixando a tag posicionado automaticamente*/
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0; /*Para deixar um espaçamento melhor visualmente*/
+}
+
+.produtos li {
+	display: inline-block; /*Deixa os itens alinhados na horizontal e com o tamanho, largura e altura regulavel*/
+	text-align: center; /*Centralizando os textos*/
+	width: 30%; /*Deixa todos eles com a largura de 30% (1/3) da página*/
+	vertical-align: text-top; /*Se recarregam pela parte de cima*/
+	margin: 0 1.5%; /*Espaçamento entre os lados*/
+	padding: 30px 20px; /*Espaçamento interno*/
+	box-sizing: border-box; /*Organiza o comando anterior automaticamente*/
+	border: 2px solid #000000; /*Sendo tamanho / tipo linha / coloração (solid = linha lisa, dashed = tracejado e dotted = pontilhado)*/
+	border-radius: 10px; 
+}
+
+.produtos li:hover {
+	border-color: #C78C19; /*Mostarda*/
+}
+
+.produtos li:active { /*Muda a cor quando se preciona o mouse*/
+	border-color: #088C19; /*Verde*/
+}
+
+.produtos li:hover h2 { /*Altera o tamanho da fonte quando se passa o mouse*/
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px; /*Tamanho da fonte*/
+	font-weight: bold; /*Negrito*/
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 10px 0 0; /*Espaçamento entre o texto e o valor*/
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px;
+}
+
+main {
+	
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form legend {
+	display: block; /*Quebra a estrutura em hor. p/ vert.*/
+	font-size: 20px;
+	margin: 0 0 10px; /*Do texto até o campo ele terá o espaçamento de 10px*/
+}
+
+.input-padrao {  /*Antes era: form input, form textarea*/
+	display: block; /*Quebra a estrutura em hor. p/ vert.*/
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox { 
+	margin: 20px 0; /*Deixa espaçado de cima p/ baixo*/
+}
+
+.enviar {
+	width: 40%;
+	padding: 15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all; /*Fazer uma transição suave p/ mudar de cor*/
+	cursor: pointer; /*Mostrar que é clicavel*/
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2); /*Faz o ícone aumentar a sua escala*/
+}
+
+table {
+	margin: 20px 0 40px;
+}
+
+thead {
+	background: #555555;
+	color: white;
+	font-weight: bolder;
+}
+
+td, th {
+	border: 1px solid #000000;
+	padding: 8px 15px;
+}
+
+/*css da página inicial*/
+.banner {
+	width: 100%;
+}
+
+.titulo-principal {
+	text-align: center;
+	font-size: 2em; /*em significa o dobro de pixels*/
+	margin: 0 0 1em;
+	clear: left; /*Ele limpa o float criado em .utensilios*/
+	/*color: rgba(0, 0, 0, 0.3); somente exemplo de opacidade*/
+	/*text-shadow: 2px 2px #FF0000; sombra nos textos*/
+}
+
+/*Dois exemplos abaixo de como usar o before and after*/
+/* .titulo-principal:before { Alteração feita somente por via css
+	content: "[ ";
+}
+
+.titulo-principal:after { Alteração feita somente por via css
+	content: " ]";
+}
+*/
+
+.principal {
+	padding: 3em;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p {
+	margin: 0 0 1em;
+}
+
+.principal strong {
+	font-weight: bold;
+}
+
+.principal em {
+	font-style: italic;
+}
+
+.utensilios {
+	width: 120px;
+	float: left; /*Imagem flutuando para a esquerda*/
+	margin: 0 20px 20px 0;
+}
+
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5; /*Quando as linhas estão muito grudadas*/
+}
+
+.itens:first-child { /*Pode se usar tbm: last-child (sendo o último) ou nth-child(2n) selecionando elementos pares*/
+	font-weight: bold;
+}
+
+.itens:before {
+	content: "★"; /*Site de símbolos (https://unicode-table.com/pt/)*/
+}
+
+.imagem-beneficios { 
+	width: 60%;
+	opacity: 1; /*Opacidade*/
+	transition: 400ms;
+	box-shadow: 10px 10px 10px 0 #000000; /*Sombra em uma imagem*/
+}
+
+.imagem-beneficios:hover {
+	opacity: 0.3;
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+}
+
+/*Dicas de SELETORES AVANÇADOS
+main > p {  Aqui ficaria somente a primeiro paragrafo na cor vermelha ao invés de todos os "p"
+    background: red;
+}
+
+img + p {  A sequencia do anterior é como se fosse pai e esse filho
+    background: blue;
+}
+
+img ~ p { Para selecionar todos os parágrafos localizados depois de uma imagem
+    background: yellow
+}
+
+.principal p:not(#missao) { Excluir um paragrafo específico sem alterar o html
+    background: orange;
+}
+*/
+
+/*Dicas de CÁLCULOS COM CSS nas imagens
+width: calc(40% - 26px);
+
+ou
+
+width: calc(40% - (26px * 4);
+*/
+
+@media screen and (max-width: 480px) { /*alterações para mobile*/
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+
+	.lista-beneficios, .imagem-beneficios {
+		width: 100%;
+	}
+}

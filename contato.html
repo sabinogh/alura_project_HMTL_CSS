@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Contato - Barbearia Alura</title>
+
+		<link rel="stylesheet" type="text/css" href="reset.css"><!--Conserta as bordas que o navegador cria-->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="caixa"> <!--Divisão-->
+				<h1>
+					<img src="logo.png" alt="Logo da Barbearia Alura">
+				</h1>
+
+				<nav> <!--Tag de navegação-->
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="produtos.html">Produtos</a>
+						</li>
+						<li>
+							<a href="contato.html">Contato</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<form> <!--Tag formulário-->
+				<label for="nomesobrenome">Nome e Sobrenome</label>
+				<input type="text" id="nomesobrenome" class="input-padrao" required>
+
+				<label for="email">E-mail</label>
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+				<label for="telefone">Telefone</label>
+				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+				<label for="mensagem">Mensagem</label>
+				<textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea> <!--Tag de conteudo-->
+
+				<!--IMPORTANTE: Site para saber como o mobile irá se comportar com determinado input (http://mobileinputtypes.com/)-->
+
+				<!--IMPORTANTE: O required é para que os campos sejam obrigatórios-->
+
+				<fieldset> <!--Ela é referente à configuração de um ou mais campos referentes a um assunto específico-->
+					<legend>Como prefere nosso contato?</legend> <!--Este agora é o paragrafo por causa do dieldset-->
+					<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">E-mail</label>
+					 <!--IMPORTANTE_01: O type é para fazer a icone de seleção / name é para que quando um seleciona os outros desmarcam / demais é amarração natural-->
+					 <!--IMPORTANTE_02: Sobre a cor do paragrafo, segue sequencia importate das prioridades. CSS: tag=1pt / class=10pts / id=100pts / inline=1.000pts (ou seja, quando ele é descrito no arquivo principal/elemento .htlm-->
+
+					<label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+					
+
+					<label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+					<!--IMPORTANTE: O checked é utilizado para que sempre seja selecionado na pagina aquela opção-->
+					
+				</fieldset>
+
+				<fieldset>
+					<legend>Qual horário prefere o nosso atendimento?</legend>
+					<select> <!--Tag seletor-->
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+				</fieldset>
+
+				<label class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas novidades por e-mail?</label>
+
+				<input type="submit" value="Enviar formulário" class="enviar"> <!--Tag Enviar formulário-->
+			</form>
+
+			<table> <!--Tag Tabela-->
+				<thead> <!--Cabeçalho-->
+					<th>Dia</th> <!--célula do cabeçalho-->
+					<th>Horário</th>
+				</thead>
+				<tbody>
+					<tr> <!--tr (Table Row): linha-->
+						<td>Segundas</td> <!--célula-->
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>
+						<td>Quartas</td>
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>
+						<td>Sextas</td>
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>
+    					<td colspan="5">Rio de Janeiro</td> <!--Células mescladas-->
+					</tr>
+				</tbody>
+			</table>
+		</main>
+
+		<footer> <!--Tag do rodapé-->
+			<img src="logo-branco.png" alt="Logo da Barbearia Alura">
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p> <!--https://unicode-table.com/pt/-->
+		</footer>
+	</body>
+</html>
